@@ -5,10 +5,32 @@
  */
 package Config;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 /**
  *
  * @author Esmeralda Almaguer
  */
 public class Conexion {
-    
+     String USERNAME = "root";
+     String PASSWORD = "1234";
+     String HOST = "localhost";
+     String PORT = "3306";
+     String DATABASE = "PELISCORP";
+     String CLASSNAME = "com.mysql.cj.jdbc.Driver";
+     String URL = "jdbc:mysql://"+HOST+":"+PORT+"/"+DATABASE;
+     Connection con;
+     
+     public Connection getConnection(){
+         try{
+             Class.forName(CLASSNAME);
+             con = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+         }
+         catch(Exception e){
+             
+         }
+         
+         return con;
+     }
 }
