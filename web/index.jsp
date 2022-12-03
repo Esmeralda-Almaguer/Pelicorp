@@ -16,8 +16,9 @@
 
             <!-- Bootstrap CSS -->
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"> <!<!-- iconos -->
 
-            <title>Index</title>
+            <title>PelisCorp -Un lugar para recordar el cine-</title>
         </head>
         <body>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -35,7 +36,7 @@
                             <a class="nav-link" href="#">Ofertas del Dia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Carrito de Compras</a>
+                            <a class="nav-link" href="Controlador?accion=Carrito"><i class="bi bi-cart-fill" style="color: darkorange" >(<label style="color: powderblue">${contador}</label>)</i>Carrito de Compras</a>
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
@@ -76,8 +77,8 @@
                                 <div class="card-footer text-center">
                                     <label> ${p.getDescripcion()}</label>
                                     <div>
-                                        <a class="btn btn-outline-info ">Agregar a Carrito</a>
-                                        <a class="btn btn-danger">Comprar</a>
+                                        <a href="Controlador?accion=AgregarCarrito&id=${p.getId()}" class="btn btn-outline-info ">Agregar a Carrito</a>
+                                        <a href="Controlador?accion=Comprar&id=${p.getId()}" class="btn btn-danger">Comprar</a>
                                     </div>
 
                                 </div>
