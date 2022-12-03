@@ -85,10 +85,12 @@
                                     <td> ${ car.getNombres() }  </td>
                                     <td> ${ car.getDescripcion() }  
                                         <img src="ControladorIMG?id=${car.getIdProducto() }" width="100" height="100"/>
-
                                     </td>
                                     <td> ${ car.getPrecioCompra() }  </td>
-                                    <td> ${ car.getCantidad() }    </td>
+                                    <td>
+                                        <input type="hidden" id="idpro" value="${car.getIdProducto() }">
+                                        <input type="number" id="Cantidad" value="${ car.getCantidad() }" class="form-control text-center" min="1" >
+                                    </td>
                                     <td> ${ car.getSubTotal() }  </td>
                                     <td>
                                         <input type="hidden" id="idp" value="${car.getIdProducto() }">

@@ -140,7 +140,20 @@ public class Controlador extends HttpServlet {
                 
                 break;
                 
+            case "ActualizarCantidad":
+              int idpro = Integer.parseInt(request.getParameter("idp"));
+              int cant = Integer.parseInt(request.getParameter("Cantidad"));
+              
+              for(int i = 0; i< listaCarrito.size(); i++){
+                if(listaCarrito.get(i).getIdProducto() == idpro){
+                    listaCarrito.get(i).setCantidad(cant);
+                    double st = listaCarrito.get(i).getPrecioCompra()*cant; //calculo subtotal
+                    listaCarrito.get(i).setSubTotal(st);
+                }
+              }
 
+                break;
+                
             default:
                 request.setAttribute("productos", productos);
                 request.getRequestDispatcher("index.jsp").forward(request, response);
