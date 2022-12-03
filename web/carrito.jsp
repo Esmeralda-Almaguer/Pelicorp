@@ -77,32 +77,33 @@
                                 <th>ACCION</th>
                             </tr>
                         </thead>
-                        
+
                         <tbody>
                             <c:forEach var="car" items="${carritop}">
-                                 <tr>
-                                <td> ${ car.getItem() } </td>
-                                <td> ${ car.getNombres() }  </td>
-                                <td> ${ car.getDescripcion() }  
-                                    <img src="ControladorIMG?id=${car.getIdProducto() }" width="100" height="100"/>
-                                
-                                </td>
-                                <td> ${ car.getPrecioCompra() }  </td>
-                                <td> ${ car.getCantidad() }    </td>
-                                <td> ${ car.getSubTotal() }  </td>
-                                <td>
-                                    <a href="#">Eliminar</a>
-                                    <a href="#">Editar</a>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td> ${ car.getItem() } </td>
+                                    <td> ${ car.getNombres() }  </td>
+                                    <td> ${ car.getDescripcion() }  
+                                        <img src="ControladorIMG?id=${car.getIdProducto() }" width="100" height="100"/>
+
+                                    </td>
+                                    <td> ${ car.getPrecioCompra() }  </td>
+                                    <td> ${ car.getCantidad() }    </td>
+                                    <td> ${ car.getSubTotal() }  </td>
+                                    <td>
+                                        <input type="hidden" id="idp" value="${car.getIdProducto() }">
+                                        <a href="#" id="btnDelete">Eliminar</a>
+
+                                    </td>
+                                </tr>
                             </c:forEach>
-                           
+
                         </tbody>
                     </table>
 
                 </div>
                 <div class="col-sm-4">
-                    
+
                     <div class="card">
                         <div class="card-header">
                             <h3>Generar Compra</h3>
@@ -131,17 +132,13 @@
 
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-        --> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="js/funciones.js" type="text/javascript"></script>
 
 
-
-    </body>
+</body>
 </html>
