@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Model.ProductoDAO;
+import ModelDAO.ProductoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

@@ -5,9 +5,13 @@
  */
 package Controller;
 
+import Config.Fecha;
 import Model.Carrito;
+import Model.Cliente;
+import Model.Compra;
 import Model.Producto;
-import Model.ProductoDAO;
+import ModelDAO.CompraDAO;
+import ModelDAO.ProductoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -110,7 +114,7 @@ public class Controlador extends HttpServlet {
                     totalPagar = totalPagar + listaCarrito.get(i).getSubTotal();
                 }
                 request.setAttribute("totalpagar", totalPagar);
-                request.getRequestDispatcher("carrito.jsp").forward(request, response);
+                request.getRequestDispatcher("vistas/carrito.jsp").forward(request, response);
                 
                 break;
                 
@@ -136,7 +140,7 @@ public class Controlador extends HttpServlet {
                 request.setAttribute("totalpagar", totalPagar);
                 request.setAttribute("carritop", listaCarrito);
                 request.setAttribute("contador", listaCarrito.size());
-                request.getRequestDispatcher("carrito.jsp").forward(request, response);
+                request.getRequestDispatcher("vistas/carrito.jsp").forward(request, response);
                 
                 break;
                 
@@ -153,7 +157,23 @@ public class Controlador extends HttpServlet {
               }
 
                 break;
+            case "GenerarCompra":
+                Cliente cliente = new Cliente();
+                cliente.setId(1);
+                CompraDAO dao = new CompraDAO();
                 
+                Compra compra = new Compra(cliente, 1, Fecha.FechaBD(), totalPagar, "Cancelado", listaCarrito);
+                
+                int res = dao.GenerarCompra(compra);
+                if(res!=0&&totalPagar>0){
+                    request.getRequestDispatcher("vistas/mensaje.jsp").forward(request, response);
+                    
+                }else{
+               request.getRequestDispatcher("vistas/error.jsp").forward(request, response);
+
+                }
+                
+                break;
             default:
                 request.setAttribute("productos", productos);
                 request.getRequestDispatcher("index.jsp").forward(request, response);
