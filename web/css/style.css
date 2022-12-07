@@ -39,11 +39,17 @@ h2{
     color: #C70039;
     margin: 40px;
 }
-body{
+
+h3{
+    color: #E8E8E8;
+}
+
+#index1{
     color: #5F78AF;
     background: #E8E8E8;
 
 }
+
 .bi{
     font-size: 17px
 
@@ -56,5 +62,9 @@ body{
     font-size: 20px;
 }
 #labCarritoGC{
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
     color: #C7D0EC;
+
 }

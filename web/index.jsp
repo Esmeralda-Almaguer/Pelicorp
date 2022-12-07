@@ -22,7 +22,7 @@
             <link rel="shortcut icon" href="peliIMG/icono-title.ico">
             <title>PelisCorp -Un lugar para recordar el cine-</title>
         </head>
-        <body>
+        <body id="index1">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                           <img src="peliIMG/peliscorp-icon.png" class="d-inline-block align-top"/>
                 <a class="navbar-brand" href="Controlador?accion=home">PelisCorp</a>

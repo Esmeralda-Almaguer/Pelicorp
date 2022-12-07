@@ -19,7 +19,7 @@
             <link rel="shortcut icon" href="peliIMG/icono-title.ico">
             <title>PelisCorp -Un lugar para recordar el cine-</title>
         </head>
-        <body>
+        <body id="carrito1">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                           <img src="peliIMG/peliscorp-icon.png" class="d-inline-block align-top"/>
                 <a class="navbar-brand" href="Controlador?accion=home">PelisCorp</a>
@@ -58,7 +58,7 @@
             </div>
         </nav>
         <div class="container mt-4">
-            <h3>Carrito de Compras</h3>
+            <h2>Carrito de Compras</h3>
             <br>  
             <div class="row">
                 <div class="col-sm-8">
@@ -117,8 +117,7 @@
                         </div>
                         <div class="card-footer">
                             <a href="Controlador?accion=GenerarCompra" class="btn btn-danger btn-block bi bi-box2-fill" > Generar Compra</a>
-                            <a href="#" class="btn btn-info btn-block bi bi-cash-coin" > Realizar Pago</a>
-                          
+                            <!--  a href="#" class="btn btn-info btn-block bi bi-cash-coin" > Realizar Pago</a>-->                         
                         </div>
                     </div>
 

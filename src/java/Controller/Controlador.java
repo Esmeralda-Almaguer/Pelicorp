@@ -162,7 +162,7 @@ public class Controlador extends HttpServlet {
                 cliente.setId(1);
                 CompraDAO dao = new CompraDAO();
                 
-                Compra compra = new Compra(cliente, 1, Fecha.FechaBD(), totalPagar, "Cancelado", listaCarrito);
+                Compra compra = new Compra(cliente, 1, Fecha.FechaBD(), totalPagar, "Procesando Pago", listaCarrito);
                 
                 int res = dao.GenerarCompra(compra);
                 if(res!=0&&totalPagar>0){
