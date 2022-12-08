@@ -15,14 +15,14 @@
 ## Tabla de Contenidos
   **PELISCORP**
   
-  - **[nbproject]([nbprojects](https://github.com/Esmeralda-Almaguer/Pelicorp/tree/Master/nbproject))**
+  - **[nbproject](https://github.com/Esmeralda-Almaguer/Pelicorp/tree/Master/nbproject)**
     - ant-deploy.xml
     - build-impl.xml
     - genfiles.properties
     - project.properties
     - project.xml
     
-  - **[Src]([src](https://github.com/Esmeralda-Almaguer/Pelicorp/tree/Master/src))**
+  - **[Src](https://github.com/Esmeralda-Almaguer/Pelicorp/tree/Master/src)**
     - conf
       - MANIFEST.MF
     - java
@@ -43,7 +43,7 @@
         - PersonaDAO.java
         - ProductoDAO.java
       
-  - **[Web]([web](https://github.com/Esmeralda-Almaguer/Pelicorp/tree/Master/web))**
+  - **[Web](https://github.com/Esmeralda-Almaguer/Pelicorp/tree/Master/web)**
     - META-INF
       - context.xml
     - WEB-INF
